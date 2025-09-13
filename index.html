@@ -3,15 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title><!-- REPLACE: SITE TITLE -->ANJALEE BISEN — Portfolio</title>
+  <title>Anjalee Bisen — Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
-    /* ---------------------
-       Simple responsive portfolio
-       Replace text between <!-- REPLACE: ... --> comments
-       --------------------- */
     :root{--accent:#0b76ef;--bg:#f7f9fc;--card:#ffffff;--muted:#6b7280}
     *{box-sizing:border-box}
     body{font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial; margin:0; background:var(--bg); color:#0f172a}
@@ -22,17 +18,13 @@
     .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#6bb9ff);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
     nav{display:flex;gap:12px}
     .btn{padding:10px 14px;border-radius:8px;background:var(--card);box-shadow:0 1px 0 rgba(0,0,0,0.04);border:1px solid #e6eefb}
-
     .hero{display:grid;grid-template-columns:1fr 280px;gap:20px;align-items:center;background:linear-gradient(90deg, rgba(255,255,255,0.6), rgba(255,255,255,0.8)); padding:22px;border-radius:12px}
     .hero h1{margin:0;font-size:28px}
     .hero p{margin:8px 0 14px;color:var(--muted)}
     .resume-actions{display:flex;gap:10px}
-
     main{margin-top:18px}
     section{background:var(--card);padding:18px;border-radius:10px;margin-bottom:14px}
     h2{margin:0 0 12px;font-size:18px}
-
-    /* Resume layout */
     .two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px}
     .project-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
     .project-card{padding:12px;border-radius:10px;border:1px solid #eef4ff;background:linear-gradient(180deg,#fff,#fbfdff)}
@@ -41,10 +33,7 @@
     .skill-label{display:flex;justify-content:space-between;font-size:13px}
     .bar{height:8px;background:#eef2ff;border-radius:999px;overflow:hidden}
     .bar > span{display:block;height:100%;background:var(--accent);width:60%}
-
     footer{text-align:center;color:var(--muted);font-size:13px;padding:8px}
-
-    /* Responsive */
     @media (max-width:780px){.hero{grid-template-columns:1fr;}.two-col{grid-template-columns:1fr}}
   </style>
 </head>
@@ -54,8 +43,8 @@
       <div class="brand">
         <div class="logo">AB</div>
         <div>
-          <div style="font-weight:700;"><!-- REPLACE: YOUR_NAME -->Anjalee Bisen</div>
-          <div style="font-size:13px;color:var(--muted)"><!-- REPLACE: TAGLINE -->B.Tech CSE | Data Analyst Intern | Python • SQL • Power BI</div>
+          <div style="font-weight:700;">Anjalee Bisen</div>
+          <div style="font-size:13px;color:var(--muted)">B.Tech CSE | Data Analyst Intern | Python • SQL • Power BI</div>
         </div>
       </div>
       <nav>
@@ -67,18 +56,16 @@
 
     <section class="hero">
       <div>
-        <h1><!-- REPLACE: NAME LINE -->Hi, I'm Anjalee — I turn data into insights</h1>
-        <p><!-- REPLACE: SHORT BIO -->I am a final-year Computer Science student skilled in Python, MySQL, Power BI and data visualization. I build dashboards and data-driven solutions to help teams make smarter decisions.</p>
+        <h1>Hi, I'm Anjalee — I turn data into insights</h1>
+        <p>I am a final-year Computer Science student skilled in Python, MySQL, Power BI and data visualization. I build dashboards and data-driven solutions to help teams make smarter decisions.</p>
         <div class="resume-actions">
-          <!-- If you want to provide a resume file, upload resume.pdf to repo and change href to resume.pdf -->
-          <a class="btn" href="resume.pdf" download>Download Resume</a>
+          <a class="btn" href="anjaleeresume.pdf" download>Download Resume</a>
           <a class="btn" href="#contact">Contact Me</a>
         </div>
       </div>
       <div style="text-align:center">
-        <!-- Optional: replace with your image by changing the src to ./photo.jpg -->
-        <div style="width:180px;height:180px;border-radius:14px;margin:0 auto;background:#f1f6ff;display:flex;align-items:center;justify-content:center;font-weight:600;color:var(--accent);">Your Photo</div>
-        <div style="margin-top:10px;color:var(--muted)">Location • LinkedIn • GitHub</div>
+        <img src="anjaleephoto.jpeg" alt="Profile Photo" style="width:180px;height:180px;border-radius:14px;object-fit:cover;">
+        <div style="margin-top:10px;color:var(--muted)">Bhopal, Madhya Pradesh, India</div>
       </div>
     </section>
 
@@ -89,29 +76,35 @@
         <div class="two-col">
           <div>
             <h3 style="margin-top:0">Education</h3>
-            <p style="margin:6px 0 2px"><strong><!-- REPLACE: UNIVERSITY -->ABC University</strong></p>
-            <p style="margin:0;color:var(--muted);font-size:13px">B.Tech Computer Science & Engineering — Graduating 2025</p>
+            <p><strong>NRI Institute of Information Science and Technology, Bhopal</strong></p>
+            <p style="margin:0;color:var(--muted);font-size:13px">B.Tech Computer Science & Engineering — CGPA: 7.91 — 2021–2025</p>
+
+            <p style="margin-top:8px"><strong>12th Standard (MP Board)</strong></p>
+            <p style="margin:0;color:var(--muted);font-size:13px">Percentage: 89.40%</p>
 
             <h3 style="margin-top:12px">Skills</h3>
             <ul style="margin:6px 0 0;padding-left:18px;color:var(--muted)">
-              <!-- REPLACE: LIST YOUR KEY SKILLS OR LEAVE AS IS -->
               <li>Python</li>
               <li>MySQL</li>
               <li>Power BI</li>
               <li>Data Analysis & Visualization</li>
+              <li>Excel</li>
+              <li>Django</li>
             </ul>
           </div>
 
           <div>
             <h3 style="margin-top:0">Work / Internship</h3>
             <div style="margin-bottom:10px">
-              <strong><!-- REPLACE: ROLE -->Data Analyst Intern</strong>
-              <div style="font-size:13px;color:var(--muted)">Water Town Swim School — Remote • Jun 2025 - Present</div>
-              <div style="margin-top:6px;color:var(--muted);font-size:13px">Worked on SQL reporting, Power BI dashboards, and client communications.</div>
+              <strong>Data Analyst Intern</strong>
+              <div style="font-size:13px;color:var(--muted)">Sorian Gadgets Pvt. Ltd., Kanpur (UP) — Remote • Jun 2025 - Present</div>
+              <div style="margin-top:6px;color:var(--muted);font-size:13px">
+                Built SQL reports, Power BI dashboards, and supported decision-making with data-driven insights.
+              </div>
             </div>
 
             <div>
-              <strong><!-- REPLACE: ROLE 2 -->Project: Internship Portal</strong>
+              <strong>Project: Internship Portal</strong>
               <div style="font-size:13px;color:var(--muted)">Django • MySQL — Built dynamic portal to manage internships, applications & recruiters.</div>
             </div>
           </div>
@@ -122,80 +115,46 @@
       <section id="projects">
         <h2>Projects</h2>
         <div class="project-grid">
-          <!-- COPY this card block to add more projects. Replace placeholders below -->
+          
+          <!-- Project 1 -->
           <div class="project-card">
-            <h3><!-- REPLACE: PROJECT TITLE -->Internship Portal</h3>
-            <p style="margin:6px 0;color:var(--muted);font-size:14px"><!-- REPLACE: PROJECT SHORT DESCRIPTION -->Django + MySQL web app to manage internships and applications with admin dashboard.</p>
-            <p style="margin:6px 0;font-size:13px">Tech: Django • HTML/CSS • MySQL</p>
-            <div style="display:flex;gap:8px;margin-top:8px">
-              <a class="btn" href="#" target="_blank">View Code</a>
-              <a class="btn" href="#" target="_blank">Live</a>
-            </div>
+            <h3>Kids’ Screen Time Dashboard</h3>
+            <p style="margin:6px 0;color:var(--muted);font-size:14px">
+              Built using Python, MySQL, and Power BI, this project analyzes screen usage patterns and health risks in children (ages 8–18).
+            </p>
+            <p style="margin:6px 0;font-size:13px">Tech: Python • MySQL • Power BI</p>
+            <img src="image1.jpeg" alt="Dashboard Screenshot" style="width:100%;border-radius:8px;margin-top:8px;">
+            <img src="image2.jpeg" alt="Dashboard Screenshot" style="width:100%;border-radius:8px;margin-top:8px;">
+            <img src="image3.jpeg" alt="Dashboard Screenshot" style="width:100%;border-radius:8px;margin-top:8px;">
           </div>
 
-          <!-- Example second project -->
+          <!-- Project 2 -->
           <div class="project-card">
-            <h3>Screen Time Analysis (9k+ children)</h3>
-            <p style="margin:6px 0;color:var(--muted);font-size:14px">Python analysis, visualizations and Power BI dashboard for screen-time behaviour study.</p>
-            <p style="margin:6px 0;font-size:13px">Tech: Python • Pandas • Power BI</p>
-            <div style="display:flex;gap:8px;margin-top:8px">
-              <a class="btn" href="#" target="_blank">View Notebook</a>
-              <a class="btn" href="#" target="_blank">Dashboard</a>
-            </div>
+            <h3>#Blinkit Grocery Sales Analysis</h3>
+            <p style="margin:6px 0;color:var(--muted);font-size:14px">
+              Analyzed grocery sales data using Power BI. Highlighted sales trends, top products, customer insights, and KPIs (total sales, avg sales, avg rating, number of items).
+            </p>
+            <p style="margin:6px 0;font-size:13px">Tech: Power BI • DAX • Data Cleaning & Modeling</p>
+            <img src="image4.jpeg" alt="Blinkit Project Screenshot" style="width:100%;border-radius:8px;margin-top:8px;">
+            <img src="image5.jpeg" alt="Blinkit Project Screenshot" style="width:100%;border-radius:8px;margin-top:8px;">
           </div>
 
-        </div>
-      </section>
-
-      <!-- ===== SKILLS ===== -->
-      <section>
-        <h2>Skills</h2>
-        <div style="display:flex;gap:20px;flex-wrap:wrap">
-          <div style="flex:1;min-width:200px">
-            <div class="skill">
-              <div class="skill-label"><span>Python</span><span>80%</span></div>
-              <div class="bar"><span style="width:80%"></span></div>
-            </div>
-            <div class="skill">
-              <div class="skill-label"><span>MySQL</span><span>75%</span></div>
-              <div class="bar"><span style="width:75%"></span></div>
-            </div>
-            <div class="skill">
-              <div class="skill-label"><span>Power BI</span><span>70%</span></div>
-              <div class="bar"><span style="width:70%"></span></div>
-            </div>
-          </div>
-          <div style="flex:1;min-width:200px">
-            <div class="skill">
-              <div class="skill-label"><span>Data Analysis</span><span>85%</span></div>
-              <div class="bar"><span style="width:85%"></span></div>
-            </div>
-            <div class="skill">
-              <div class="skill-label"><span>Excel</span><span>80%</span></div>
-              <div class="bar"><span style="width:80%"></span></div>
-            </div>
-          </div>
         </div>
       </section>
 
       <!-- ===== CONTACT ===== -->
       <section id="contact">
         <h2>Contact</h2>
-        <p style="color:var(--muted);margin-top:6px">Email: <a href="mailto:your.email@example.com"><!-- REPLACE: EMAIL -->your.email@example.com</a></p>
-        <p style="color:var(--muted);margin-top:6px">LinkedIn: <a href="#"><!-- REPLACE: LINKEDIN -->linkedin.com/in/yourprofile</a></p>
-        <p style="color:var(--muted);margin-top:6px">GitHub: <a href="#"><!-- REPLACE: GITHUB -->github.com/yourusername</a></p>
+        <p style="color:var(--muted);margin-top:6px">📞 Phone: 9301449558</p>
+        <p style="color:var(--muted);margin-top:6px">📧 Email: <a href="mailto:anjaleebisen@gmail.com">anjaleebisen@gmail.com</a></p>
+        <p style="color:var(--muted);margin-top:6px">🔗 LinkedIn: <a href="https://www.linkedin.com/in/anjalee-bisen-20463a265" target="_blank">linkedin.com/in/anjalee-bisen-20463a265</a></p>
+        <p style="color:var(--muted);margin-top:6px">💻 GitHub: <a href="https://github.com/Anjaleeintern" target="_blank">github.com/Anjaleeintern</a></p>
       </section>
-
     </main>
 
     <footer>
-      <!-- update year if you want -->
-      © <!-- REPLACE: YEAR -->2025 — <!-- REPLACE: YOUR_NAME_FOOTER -->Anjalee Bisen
+      © 2025 — Anjalee Bisen
     </footer>
   </div>
-
-  <script>
-    // Small helper: if you want to open resume in a new tab when resume.pdf missing, it will 404; upload resume.pdf to repo root to enable download
-  </script>
 </body>
 </html>
