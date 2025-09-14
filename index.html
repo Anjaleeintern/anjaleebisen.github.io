@@ -1,157 +1,226 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
-  <!-- Font Awesome -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Anjalee Bisen — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #141e30, #243b55);
-      color: white;
-      text-align: center;
+    :root{
+      --accent:#0b76ef;
+      --bg:#f7f9fc;
+      --card:#ffffff;
+      --muted:#6b7280
     }
-
-    header {
-      padding: 60px 20px;
+    *{box-sizing:border-box}
+    body{
+      font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;
+      margin:0;
+      background:var(--bg);
+      color:#0f172a
     }
-
-    header h1 {
-      font-size: 2.5rem;
-      margin: 10px 0;
+    a{color:var(--accent); text-decoration:none}
+    .container{max-width:1000px; margin:28px auto; padding:24px}
+    header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{
+      width:56px;height:56px;border-radius:12px;
+      background:linear-gradient(135deg,var(--accent),#6bb9ff);
+      display:flex;align-items:center;justify-content:center;
+      color:white;font-weight:700
     }
-
-    header p {
-      font-size: 1.2rem;
-      color: #ddd;
+    nav{display:flex;gap:12px}
+    .btn{
+      padding:10px 14px;border-radius:8px;
+      background:var(--card);
+      border:1px solid #e6eefb;
+      box-shadow:0 1px 0 rgba(0,0,0,0.05);
+      transition:0.3s
     }
-
-    section {
-      padding: 50px 20px;
+    .btn:hover{background:var(--accent);color:white}
+    .hero{
+      display:grid;grid-template-columns:1fr 280px;gap:20px;align-items:center;
+      background:linear-gradient(90deg, rgba(255,255,255,0.6), rgba(255,255,255,0.8));
+      padding:22px;border-radius:12px
     }
-
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #ff9800;
+    .hero h1{margin:0;font-size:28px}
+    .hero p{margin:8px 0 14px;color:var(--muted)}
+    .resume-actions{display:flex;gap:10px}
+    main{margin-top:18px}
+    section{
+      background:var(--card);
+      padding:20px;
+      border-radius:12px;
+      margin-bottom:16px;
+      box-shadow:0 2px 6px rgba(0,0,0,0.04)
     }
-
+    h2{margin:0 0 14px;font-size:20px;color:var(--accent)}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    /* Project Cards */
+    .project-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+    .project-card{
+      padding:14px;border-radius:12px;
+      border:1px solid #eef4ff;
+      background:linear-gradient(180deg,#fff,#fbfdff);
+      transition:0.3s
+    }
+    .project-card:hover{transform:translateY(-4px);border-color:var(--accent)}
+    .project-card h3{margin:0 0 8px;font-size:16px;color:#111}
+    /* Experience cards */
+    .experience-grid{display:grid;gap:14px}
+    .exp-card{
+      padding:16px;
+      border-radius:12px;
+      border:1px solid #eef4ff;
+      background:linear-gradient(180deg,#fff,#f9fbff);
+      transition:0.3s
+    }
+    .exp-card:hover{background:#eaf4ff;transform:translateY(-3px)}
+    .exp-card h3{margin:0;font-size:16px;color:#111}
+    .exp-card p{margin:4px 0;font-size:14px;color:var(--muted)}
     /* Contact icons */
-    .contact-icons {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 15px;
-    }
-
-    .contact-icons a {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 12px 20px;
-      background: #333;
-      color: white;
-      font-weight: bold;
-      text-decoration: none;
-      border-radius: 8px;
-      width: 280px;
-      justify-content: center;
-      transition: 0.3s;
-    }
-
-    .contact-icons a:hover {
-      background: #ff9800;
-      color: black;
-      transform: scale(1.05);
-    }
-
-    /* Experience Section */
-    .experience {
-      max-width: 800px;
-      margin: auto;
-      text-align: left;
-    }
-
-    .exp-card {
-      background: #2c3e50;
-      padding: 20px;
-      margin: 15px 0;
-      border-radius: 10px;
-      transition: 0.3s;
-    }
-
-    .exp-card:hover {
-      background: #ff9800;
-      color: black;
-      transform: translateY(-5px);
-    }
-
-    .exp-card h3 {
-      margin: 0;
-      font-size: 1.5rem;
-    }
-
-    .exp-card p {
-      margin: 5px 0;
-    }
-
-    footer {
-      margin-top: 50px;
-      padding: 20px;
-      background: #111;
-      color: #aaa;
+    .contact-icons{display:flex;gap:18px;margin-top:14px;font-size:24px;justify-content:center}
+    .contact-icons a{color:var(--muted);transition:0.3s}
+    .contact-icons a:hover{color:var(--accent);transform:scale(1.2)}
+    footer{text-align:center;color:var(--muted);font-size:13px;padding:10px}
+    @media (max-width:780px){
+      .hero{grid-template-columns:1fr}
+      .two-col{grid-template-columns:1fr}
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>My Portfolio</h1>
-    <p>Welcome to my personal portfolio website</p>
-  </header>
-
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I am Graduated in Computer Science and Engineering and passionate about Data Analysis, Python, SQL, and Machine Learning.</p>
-  </section>
-
-  <!-- EXPERIENCE SECTION -->
-  <section id="experience">
-    <h2>Experience</h2>
-    <div class="exp-card">
-        <h3>Sorian Gadgets Pvt. Ltd., Kanpur (UP) — Remote • July 2025 - Present</h3>
-        <p>Conducted market research, competitor analysis, and customer
-segmentation; developed dashboards and reports using Excel, Power BI & SQL; integrated policy insights from Smart Cities, MNRE, WHO, and UNICEF for product strategy.
-</p>
+  <div class="container">
+    <!-- ===== HEADER ===== -->
+    <header>
+      <div class="brand">
+        <div class="logo">AB</div>
+        <div>
+          <div style="font-weight:700;">Anjalee Bisen</div>
+          <div style="font-size:13px;color:var(--muted)">
+            B.Tech CSE | Data Analyst Intern | Python • SQL • Power BI
+          </div>
+        </div>
       </div>
+      <nav>
+        <a class="btn" href="#experience">Experience</a>
+        <a class="btn" href="#projects">Projects</a>
+        <a class="btn" href="#resume">Resume</a>
+        <a class="btn" href="#contact">Contact</a>
+      </nav>
+    </header>
 
-      
-  </section>
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div>
+        <h1>Hi, I'm Anjalee — I turn data into insights</h1>
+        <p>I graduated in Computer Science Engineering and I’m skilled in Python, MySQL, Power BI and data visualization. I build dashboards and data-driven solutions to help teams make smarter decisions.</p>
+        <div class="resume-actions">
+          <a class="btn" href="anjaleeresume.pdf" target="_blank">View Resume</a>
+          <a class="btn" href="#contact">Contact Me</a>
+        </div>
+      </div>
+      <div style="text-align:center">
+        <img src="anjaleephoto.jpeg" alt="Profile Photo" style="width:180px;height:180px;border-radius:14px;object-fit:cover;">
+        <div style="margin-top:10px;color:var(--muted)">Bhopal, Madhya Pradesh, India</div>
+      </div>
+    </section>
 
-  <!-- CONTACT SECTION -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <div class="contact-icons">
-      <a href="https://www.linkedin.com/in/yourprofile" target="_blank">
-        <i class="fab fa-linkedin"></i> LinkedIn
-      </a>
-      <a href="https://github.com/yourusername" target="_blank">
-        <i class="fab fa-github"></i> GitHub
-      </a>
-      <a href="mailto:youremail@example.com">
-        <i class="fas fa-envelope"></i> youremail@example.com
-      </a>
-      <a href="tel:+911234567890">
-        <i class="fas fa-phone"></i> +91 12345 67890
-      </a>
-    </div>
-  </section>
+    <main>
+      <!-- ===== EXPERIENCE ===== -->
+      <section id="experience">
+        <h2>Experience</h2>
+        <div class="experience-grid">
+          <div class="exp-card">
+            <h3>Data Analyst Intern – Sorian Gadgets Pvt. Ltd.</h3>
+            <p><strong>July 2025 – Present | Remote</strong></p>
+            <p>Created SQL reports and interactive Power BI dashboards. Provided insights to support strategic business decisions.</p>
+          </div>
+          <div class="exp-card">
+            <h3>Python Developer Intern – Freelance Project</h3>
+            <p><strong>June 2025</strong></p>
+            <p>Developed Binance Futures Trading Bot with Django, Testnet API, and frontend-backend integration.</p>
+          </div>
+          <div class="exp-card">
+            <h3>Web Scraping Projects – Freelance</h3>
+            <p><strong>May 2025</strong></p>
+            <p>Extracted RFQ data from Alibaba and Instagram profiles using Selenium, automated CSV export for analysis.</p>
+          </div>
+        </div>
+      </section>
 
-  <footer>
-    <p>© 2025 My Portfolio | Designed with ❤️</p>
-  </footer>
+      <!-- ===== RESUME ===== -->
+      <section id="resume">
+        <h2>Resume</h2>
+        <p>You can view my complete resume here:</p>
+        <a class="btn" href="anjaleeresume.pdf" target="_blank">View Full Resume (PDF)</a>
+        <div class="two-col" style="margin-top:16px">
+          <div>
+            <h3 style="margin-top:0">Education</h3>
+            <p><strong>NRI Institute of Information Science and Technology, Bhopal</strong></p>
+            <p style="margin:0;color:var(--muted);font-size:13px">B.Tech CSE — CGPA: 7.91 — 2021–2025</p>
+            <p style="margin-top:8px"><strong>12th Standard (MP Board)</strong></p>
+            <p style="margin:0;color:var(--muted);font-size:13px">Percentage: 89.40%</p>
+            <h3 style="margin-top:12px">Skills</h3>
+            <ul style="margin:6px 0 0;padding-left:18px;color:var(--muted)">
+              <li>Python</li><li>MySQL</li><li>Power BI</li>
+              <li>Data Analysis & Visualization</li><li>Excel</li>
+            </ul>
+          </div>
+          <div>
+            <h3 style="margin-top:0">Work / Internship (Highlights)</h3>
+            <p><strong>Data Analyst Intern – Sorian Gadgets</strong></p>
+            <p style="margin:0;color:var(--muted);font-size:13px">July 2025 – Present • Remote</p>
+            <p style="margin-top:6px;color:var(--muted);font-size:13px">Created reports, dashboards, and marketing insights.</p>
+            <p style="margin-top:8px"><strong>Major Project: Internship Portal</strong></p>
+            <p style="margin:0;color:var(--muted);font-size:13px">Built with Django & MySQL to manage internships, recruiters, and applications.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== PROJECTS ===== -->
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-grid">
+          <div class="project-card">
+            <h3>Kid's Screen Time Dashboard</h3>
+            <p style="margin:6px 0;color:var(--muted);font-size:14px">
+              Dashboard analyzing screen usage patterns & health risks among children aged 8–18.
+            </p>
+            <p style="margin:6px 0;font-size:13px">Tech: Python • MySQL • Power BI</p>
+            <img src="image1.png" alt="Dashboard Screenshot" style="width:100%;border-radius:8px;margin-top:8px;">
+          </div>
+          <div class="project-card">
+            <h3>Blinkit Grocery Sales Analysis</h3>
+            <p style="margin:6px 0;color:var(--muted);font-size:14px">
+              Power BI dashboard showing sales trends, top products, customer KPIs, and insights.
+            </p>
+            <p style="margin:6px 0;font-size:13px">Tech: Power BI • DAX • Data Modeling</p>
+            <img src="image4.png" alt="Blinkit Project Screenshot" style="width:100%;border-radius:8px;margin-top:8px;">
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CONTACT ===== -->
+      <section id="contact">
+        <h2>Contact</h2>
+        <p style="color:var(--muted);margin-top:6px">Let’s connect:</p>
+        <div class="contact-icons">
+          <a href="tel:+919301449558" title="Call"><i class="fas fa-phone"></i></a>
+          <a href="mailto:anjaleebisen@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+          <a href="https://www.linkedin.com/in/anjalee-bisen-20463a265" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/Anjaleeintern" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © 2025 — Anjalee Bisen
+    </footer>
+  </div>
 </body>
 </html>
