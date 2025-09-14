@@ -9,42 +9,123 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <!-- Font Awesome for icons -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
   <style>
-    :root{--accent:#0b76ef;--bg:#f7f9fc;--card:#ffffff;--muted:#6b7280}
-    *{box-sizing:border-box}
-    body{font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial; margin:0; background:var(--bg); color:#0f172a}
+    :root{
+      --accent:#0b76ef;
+      --bg:linear-gradient(135deg,#e3f2fd,#ffffff);
+      --card:#ffffff;
+      --muted:#6b7280;
+      --hover:#0056b3;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;
+      background:var(--bg);
+      color:#0f172a;
+      line-height:1.6;
+    }
     a{color:var(--accent); text-decoration:none}
     .container{max-width:980px; margin:28px auto; padding:24px}
-    header{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+    
+    header{
+      display:flex;justify-content:space-between;align-items:center;margin-bottom:18px
+    }
     .brand{display:flex;align-items:center;gap:12px}
-    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#6bb9ff);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    .logo{
+      width:56px;height:56px;border-radius:12px;
+      background:linear-gradient(135deg,var(--accent),#6bb9ff);
+      display:flex;align-items:center;justify-content:center;
+      color:white;font-weight:700;font-size:18px;
+    }
     nav{display:flex;gap:12px}
-    .btn{padding:10px 14px;border-radius:8px;background:var(--card);box-shadow:0 1px 0 rgba(0,0,0,0.04);border:1px solid #e6eefb}
-    .hero{display:grid;grid-template-columns:1fr 280px;gap:20px;align-items:center;background:linear-gradient(90deg, rgba(255,255,255,0.6), rgba(255,255,255,0.8)); padding:22px;border-radius:12px}
-    .hero h1{margin:0;font-size:28px}
+    .btn{
+      padding:10px 14px;
+      border-radius:8px;
+      background:var(--accent);
+      color:white;
+      transition:0.3s;
+      font-weight:600;
+    }
+    .btn:hover{
+      background:var(--hover);
+      transform:translateY(-2px);
+    }
+
+    .hero{
+      display:grid;
+      grid-template-columns:1fr 280px;
+      gap:20px;
+      align-items:center;
+      background:rgba(255,255,255,0.8);
+      padding:22px;
+      border-radius:12px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    }
+    .hero h1{margin:0;font-size:30px;font-weight:700}
     .hero p{margin:8px 0 14px;color:var(--muted)}
     .resume-actions{display:flex;gap:10px}
-    main{margin-top:18px}
-    section{background:var(--card);padding:18px;border-radius:10px;margin-bottom:14px}
-    h2{margin:0 0 12px;font-size:18px}
+
+    section{
+      background:var(--card);
+      padding:18px;
+      border-radius:10px;
+      margin-bottom:14px;
+      box-shadow:0 3px 8px rgba(0,0,0,0.05);
+    }
+    h2{margin:0 0 12px;font-size:20px;font-weight:700}
     .two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px}
     .project-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
-    .project-card{padding:12px;border-radius:10px;border:1px solid #eef4ff;background:linear-gradient(180deg,#fff,#fbfdff)}
+    .project-card{
+      padding:12px;
+      border-radius:10px;
+      border:1px solid #eef4ff;
+      background:linear-gradient(180deg,#fff,#fbfdff);
+      transition:0.3s;
+    }
+    .project-card:hover{transform:translateY(-5px);box-shadow:0 4px 12px rgba(0,0,0,0.1)}
     .project-card h3{margin:0 0 6px;font-size:16px}
-    .skill{margin-bottom:10px}
-    .skill-label{display:flex;justify-content:space-between;font-size:13px}
-    .bar{height:8px;background:#eef2ff;border-radius:999px;overflow:hidden}
-    .bar > span{display:block;height:100%;background:var(--accent);width:60%}
-    footer{text-align:center;color:var(--muted);font-size:13px;padding:8px}
-    /* Contact icons styling */
-    .contact-icons{display:flex;gap:18px;margin-top:14px;font-size:24px}
-    .contact-icons a{color:var(--muted);transition:0.3s}
-    .contact-icons a:hover{color:var(--accent)}
-    @media (max-width:780px){.hero{grid-template-columns:1fr;}.two-col{grid-template-columns:1fr}}
+
+    /* Contact section */
+    .contact-list{
+      margin-top:12px;
+    }
+    .contact-item{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin:10px 0;
+      font-weight:600;
+      font-size:16px;
+      color:#333;
+      transition:0.3s;
+    }
+    .contact-item i{
+      font-size:20px;
+      color:var(--accent);
+    }
+    .contact-item:hover{
+      color:var(--hover);
+      transform:translateX(4px);
+    }
+
+    footer{
+      text-align:center;
+      color:var(--muted);
+      font-size:13px;
+      padding:12px;
+      margin-top:20px;
+    }
+    @media (max-width:780px){
+      .hero{grid-template-columns:1fr;}
+      .two-col{grid-template-columns:1fr}
+    }
   </style>
 </head>
 <body>
   <div class="container">
+    <!-- ===== HEADER ===== -->
     <header>
       <div class="brand">
         <div class="logo">AB</div>
@@ -60,12 +141,12 @@
       </nav>
     </header>
 
+    <!-- ===== HERO ===== -->
     <section class="hero">
       <div>
         <h1>Hi, I'm Anjalee — I turn data into insights</h1>
-        <p>I am Graduated in Computer Science Engineering and strong skilled in Python, MySQL, Power BI and data visualization. I build dashboards and data-driven solutions to help teams make smarter decisions.</p>
+        <p>I am a Computer Science Engineering graduate with strong skills in Python, MySQL, Power BI and data visualization. I build dashboards and data-driven solutions to help teams make smarter decisions.</p>
         <div class="resume-actions">
-          <!-- Changed Download to View Resume -->
           <a class="btn" href="anjaleeresume.pdf" target="_blank">View Resume</a>
           <a class="btn" href="#contact">Contact Me</a>
         </div>
@@ -112,11 +193,7 @@
               </div>
             </div>
 
-            <div>
-              <strong>Project: Internship Portal</strong>
-              <div style="font-size:13px;color:var(--muted)">Django • MySQL — Built dynamic portal to manage internships, applications & recruiters.</div>
             </div>
-          </div>
         </div>
       </section>
 
@@ -138,7 +215,7 @@
           <div class="project-card">
             <h3>Blinkit Grocery Sales Analysis</h3>
             <p style="margin:6px 0;color:var(--muted);font-size:14px">
-              Analyzed grocery sales data using Power BI. Highlighted sales trends, top products, customer insights, and KPIs (total sales, avg sales, avg rating, number of items).
+              Analyzed grocery sales data using Power BI. Highlighted sales trends, top products, customer insights, and KPIs.
             </p>
             <p style="margin:6px 0;font-size:13px">Tech: Power BI • DAX • Data Cleaning & Modeling</p>
             <img src="image4.png" alt="Blinkit Project Screenshot" style="width:100%;border-radius:8px;margin-top:8px;">
@@ -149,12 +226,19 @@
       <!-- ===== CONTACT ===== -->
       <section id="contact">
         <h2>Contact</h2>
-        <p style="color:var(--muted);margin-top:6px">Let’s connect:</p>
-        <div class="contact-icons">
-          <a href="tel:+919301449558" title="Call"><i class="fas fa-phone"></i></a>
-          <a href="mailto:anjaleebisen@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-          <a href="https://www.linkedin.com/in/anjalee-bisen-20463a265" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-          <a href="https://github.com/Anjaleeintern" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <div class="contact-list">
+          <a class="contact-item" href="tel:+919301449558">
+            <i class="fas fa-phone"></i> Phone: <span>+91 9301449558</span>
+          </a>
+          <a class="contact-item" href="mailto:anjaleebisen@gmail.com">
+            <i class="fas fa-envelope"></i> Email: <span>anjaleebisen@gmail.com</span>
+          </a>
+          <a class="contact-item" href="https://www.linkedin.com/in/anjalee-bisen-20463a265" target="_blank">
+            <i class="fab fa-linkedin"></i> LinkedIn: <span>linkedin.com/in/anjalee-bisen-20463a265</span>
+          </a>
+          <a class="contact-item" href="https://github.com/Anjaleeintern" target="_blank">
+            <i class="fab fa-github"></i> GitHub: <span>github.com/Anjaleeintern</span>
+          </a>
         </div>
       </section>
     </main>
