@@ -59,16 +59,18 @@
     }
     h2{margin:0 0 14px;font-size:20px;color:var(--accent)}
     .two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-    /* Project Cards */
-    .project-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
-    .project-card{
+    /* Project & Certification Cards */
+    .grid-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+    .card{
       padding:14px;border-radius:12px;
       border:1px solid #eef4ff;
       background:linear-gradient(180deg,#fff,#fbfdff);
       transition:0.3s
     }
-    .project-card:hover{transform:translateY(-4px);border-color:var(--accent)}
-    .project-card h3{margin:0 0 8px;font-size:16px;color:#111}
+    .card:hover{transform:translateY(-4px);border-color:var(--accent)}
+    .card h3{margin:0 0 8px;font-size:16px;color:#111}
+    .card p{margin:6px 0;color:var(--muted);font-size:14px}
+    .card img{width:100%;border-radius:8px;margin-top:8px}
     /* Experience cards */
     .experience-grid{display:grid;gap:14px}
     .exp-card{
@@ -81,6 +83,14 @@
     .exp-card:hover{background:#eaf4ff;transform:translateY(-3px)}
     .exp-card h3{margin:0;font-size:16px;color:#111}
     .exp-card p{margin:4px 0;font-size:14px;color:var(--muted)}
+    /* Skills with Icons */
+    .skill-list{list-style:none;padding:0;margin:6px 0 0}
+    .skill-list li{
+      margin-bottom:8px;
+      display:flex;align-items:center;gap:8px;
+      color:var(--muted);
+    }
+    .skill-list i{color:var(--accent)}
     /* Contact Section */
     #contact {
       background:#f1f5f9;
@@ -179,19 +189,35 @@ segmentation; developed dashboards and reports using Excel, Power BI & SQL; inte
             <p style="margin:0;color:var(--muted);font-size:13px">B.Tech CSE — CGPA: 7.91 — 2021–2025</p>
             <p style="margin-top:8px"><strong>12th Standard (MP Board)</strong></p>
             <p style="margin:0;color:var(--muted);font-size:13px">Percentage: 89.40%</p>
+
             <h2 style="margin-top:12px">Skills</h2>
-            <ul style="margin:6px 0 0;padding-left:18px;color:var(--muted)">
-              <li>Python</li><li>MySQL</li><li>Power BI</li>
-              <li>Data Analysis & Visualization</li><li>Excel</li>
+            <ul class="skill-list">
+              <li><i class="fab fa-python"></i> Python</li>
+              <li><i class="fas fa-database"></i> MySQL</li>
+              <li><i class="fas fa-chart-bar"></i> Power BI</li>
+              <li><i class="fas fa-table"></i> Excel</li>
+              <li><i class="fas fa-chart-line"></i> Data Analysis & Visualization</li>
             </ul>
           </div>
           <div>
             <h2 style="margin-top:0">Certifications</h2>
-            <ul style="margin:6px 0 0;padding-left:18px;color:var(--muted)">
-              <li>Python with Data Science — Sherians Coding School</li>
-              <li>SQL for Data Analysis — (Certification)</li>
-              <li>Power BI for Beginners — (Certification)</li>
-            </ul>
+            <div class="grid-cards">
+              <div class="card">
+                <h3>Python with Data Science</h3>
+                <p>Sherians Coding School</p>
+                <img src="cert1.png" alt="Python Certification">
+              </div>
+              <div class="card">
+                <h3>SQL for Data Analysis</h3>
+                <p>Certification</p>
+                <img src="cert2.png" alt="SQL Certification">
+              </div>
+              <div class="card">
+                <h3>Power BI for Beginners</h3>
+                <p>Certification</p>
+                <img src="cert3.png" alt="Power BI Certification">
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -199,22 +225,18 @@ segmentation; developed dashboards and reports using Excel, Power BI & SQL; inte
       <!-- ===== PROJECTS ===== -->
       <section id="projects">
         <h2>Projects</h2>
-        <div class="project-grid">
-          <div class="project-card">
+        <div class="grid-cards">
+          <div class="card">
             <h3>Kid's Screen Time Dashboard</h3>
-            <p style="margin:6px 0;color:var(--muted);font-size:14px">
-              Dashboard analyzing screen usage patterns & health risks among children aged 8–18.
-            </p>
+            <p>Dashboard analyzing screen usage patterns & health risks among children aged 8–18.</p>
             <p style="margin:6px 0;font-size:13px">Tech: Python • MySQL • Power BI</p>
-            <img src="image1.png" alt="Dashboard Screenshot" style="width:100%;border-radius:8px;margin-top:8px;">
+            <img src="image1.png" alt="Dashboard Screenshot">
           </div>
-          <div class="project-card">
+          <div class="card">
             <h3>Blinkit Grocery Sales Analysis</h3>
-            <p style="margin:6px 0;color:var(--muted);font-size:14px">
-              Power BI dashboard showing sales trends, top products, customer KPIs, and insights.
-            </p>
+            <p>Power BI dashboard showing sales trends, top products, customer KPIs, and insights.</p>
             <p style="margin:6px 0;font-size:13px">Tech: Power BI • DAX • Data Modeling</p>
-            <img src="image4.png" alt="Blinkit Project Screenshot" style="width:100%;border-radius:8px;margin-top:8px;">
+            <img src="image4.png" alt="Blinkit Project Screenshot">
           </div>
         </div>
       </section>
